@@ -34,7 +34,7 @@
                 '<label for="comment" style="text-align:center;">Send me a message:</label>' +
                 '<textarea class="form-control" rows="5" id="comment"></textarea>' +
                 '</div>' +
-                '<button type="submit" class="btn btn-default landing-btn">Send Message</button>' +
+                '<button type="button" onClick="window.location.reload();" class="btn btn-default landing-btn">Send Message</button>' +
                 '</div>' +
                 '<hr>' +
                 '</div>';
