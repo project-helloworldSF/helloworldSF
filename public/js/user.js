@@ -40,7 +40,7 @@ $(document).ready(function() {
   }
 
   function reRoute() {
-    window.location.href = "/users";
+    window.location.href = "/bootcampers";
   }
   
 });
