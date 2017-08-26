@@ -32,8 +32,7 @@ module.exports = function(app) {
       title: req.body.title,
       salary: req.body.salary
     }).then(function(dbUser) {
-
-      res.redirect("/");
+      res.redirect("/bootcamps");
     });
     
   });

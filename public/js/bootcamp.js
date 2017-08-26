@@ -1,12 +1,7 @@
 $(document).ready(function() {
 
-  //get route linked to the backend - that gives us the bootcamps json
   $.get('/api/bootcamp', function(data) {
-    //data is the bootcamps json
-    console.log(data);
-    //looping through each object
     for (var i = 0; i < data.length; i++) {
-      //Dynamically creating html by concatenating data from the json
       var bootcamp_html =
         '<div class="row bootcamp">' +
         '<div class="col-md-4 bootcamp_image">' +
@@ -23,18 +18,33 @@ $(document).ready(function() {
         '<h4>Duration: ' + data[i].duration + ' months</h4>' +
         '<h4>Costs: $' + data[i].costs + '</h4>' +
         '</div>' +
+        '<form class="comment-form">' +
         '<div class="form-group">' +
         '<label for="comment">Comment:</label>' +
         '<textarea class="form-control" rows="5" id="comment"></textarea>' +
+        '<button id="comment-btn" type="submit" class="btn btn-default landing-btn">Submit Comment</button>' +
+        //hidden key for table join sending the right key for the comment associated to the school.
+        '<div style="display:none;"><input id="f_key" >' + data[i].comments + '</div>' +
         '</div>' +
-        '<button type="submit" class="btn btn-default landing-btn">Submit Comment</button>' +
-        '<h4 id="comment-box">' + data[i].comments + '</h4>' +
+        '</form>' +
+        '<h3 style="text-align:center;">Bootcamper Comments:</h3>' +
+        //div for appending comments after get below
+        '<div class="for-comments" id="' + data[i].comments + '"></div>' +
+        '<hr style="max-width:95%;">' +
         '</div>';
-//appending Dynamically created HTML in the #bootcamp_list id that lives in our
-//bootcamp.html file
       $("#bootcamp_list").append(bootcamp_html);
     }
-  })
+  });
 
+  $.get('/api/comments', function(data) {
+    for (var i = 0; i < data.length; i++) {
+      var comments_html =
+        '<div class="row comments-row">' +
+        '<h4>- ' + data[i].comment + '</h4>' +
+        '<div style="display:none;"><input id="f_key" >' + data[i].f_key + '</div>' +
+        '</div>';
+      $('#'+data[i].f_key).append(comments_html);
+    }
+  });
 
 });
