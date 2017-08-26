@@ -24,6 +24,8 @@
 </div>
 <!-- Search For Camp -->
 <button id="bootcamp" type="button" class="btn btn-info btn-lg landing-btn">Bootcamps</button>
+<!-- Sign-up -->
+<button id="signup-submit" type="submit" class="btn btn-info btn-lg landing-btn">Sign-up</button>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -34,6 +36,11 @@
              
                   $("#bootcamp").click(function(){
                       var redirectURL = "/bootcamp";
+                      window.location.href = redirectURL;
+                  });
+                  
+                  $("#signup-submit").click(function(){
+                      var redirectURL = "/users";
                       window.location.href = redirectURL;
                   });
              

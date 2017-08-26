@@ -16,7 +16,7 @@
   <div class="container landing-container">
     <h2 class="text-center" id="landing-title">HelloWorld</h2>
       <!-- Login Modal -->
-      <button type="button" class="btn btn-info btn-lg landing-btn" data-toggle="modal" data-target="#login">Login</button>
+      <button type="button" class="btn btn-info btn-lg landing-btn buttons" data-toggle="modal" data-target="#login">Login</button>
       
         <!-- Modal -->
         <div class="modal fade" id="login" role="dialog">
@@ -38,7 +38,7 @@
                         <label for="pwd">Password:</label>
                         <input type="password" class="form-control" id="pwd" placeholder="Enter password">
                       </div>
-                      <button id="login-button" type="submit" class="btn btn-default">Login</button>
+                      <button id="login-button" type="submit" class="btn btn-default buttons">Login</button>
                   </form>
               </div>
             </div>
@@ -46,9 +46,11 @@
           </div>
         </div>
       <!-- Sign-up -->
-      <button id="signup-submit" type="submit" class="btn btn-info btn-lg landing-btn">Sign-up</button>
+      <button id="signup-submit" type="submit" class="btn btn-info btn-lg landing-btn buttons">Sign-up</button>
       <!-- Search For Camp -->
-      <button id="bootcamp" type="button" class="btn btn-info btn-lg landing-btn">Search For Bootcamp</button>
+      <button id="bootcamp" type="button" class="btn btn-info btn-lg landing-btn buttons">Bootcamps</button>
+      <!-- Search For Camp -->
+      <button id="bootcampers" type="button" class="btn btn-info btn-lg landing-btn buttons">Bootcampers</button>
       
   </div>
 </div>
@@ -67,6 +69,11 @@
      
           $("#bootcamp").click(function(){
               var redirectURL = "/bootcamp";
+              window.location.href = redirectURL;
+          });
+
+          $("#bootcampers").click(function(){
+              var redirectURL = "/bootcampers";
               window.location.href = redirectURL;
           });
      
