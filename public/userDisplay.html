@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>HelloWorld - Bootcamp Networking App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Bootcamp Networking App." />
+    <meta name="author" content="HelloWorld" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="././css/style.css">    
+    <link rel="stylesheet" type="text/css" href="././css/bootcamp_style.css">
+</head>
+<body>
+<h2 class="text-center" id="landing-title">Bootcampers</h2>
+<div class="container-padding">
+  <div class="container user-container">
+    <div id="user_list">
+    <!-- bootcamps go here -->
+    </div>
+
+  </div>
+</div>
+<!-- Search For Camp -->
+<button id="bootcamp" type="button" class="btn btn-info btn-lg landing-btn">Bootcamps</button>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Custom Script -->
+<script src="/js/userDisplay.js" types="text/javascript"></script>
+<script>
+             
+                  $("#bootcamp").click(function(){
+                      var redirectURL = "/bootcamp";
+                      window.location.href = redirectURL;
+                  });
+             
+</script>
+</body>
+</html>

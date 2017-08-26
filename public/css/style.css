@@ -23,6 +23,16 @@ h2 {
   text-shadow: 0 0 5px black;
 }
 
+h3 {
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+h4 {
+  font-size: 16px;
+}
+
 label {
   font-size: 1.3em;
 }
@@ -69,13 +79,21 @@ label {
 }
 
 .landing-btn {
-  max-width: 300px;
+  max-width: 200px;
   width: 100%;
   display: block;
   clear: both;
-  margin: 10px auto;
+  margin: 15px auto;
   font-size: 20px;
   background-color: teal;
+}
+
+.btn-center {
+  margin: 0 auto;
+}
+
+.container-padding {
+  margin: 0 10px;
 }
 
 @media (max-width: 900px) {
@@ -88,5 +106,49 @@ label {
   body {
     background-size: 400%;
     background-position: 52% 0%;    
+  }
+}
+
+/* ------------------ User Display ------------------------*/
+.image-cropper {
+  max-width: 300px;
+  margin: 0 auto;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+  
+  .image-cropper img{
+    display: block;
+    margin: 5px auto 0;
+    height: auto;
+    width: 100%; 
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;  
+  }
+
+  .margin-fix {
+    left: 34px;
+  }
+
+  #center-text {
+    text-align: center;
+  }
+
+  hr {
+    height: 2px;
+    background-color: lightgrey;
+  }
+/* ------------------ User Display END -------------------*/
+
+@media (max-width: 991px) {
+  h4 {
+    text-align: center;
+  }
+  .margin-fix {
+    left: 0;
   }
 }

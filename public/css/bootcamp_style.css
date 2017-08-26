@@ -1,6 +1,6 @@
 .logos{
   width:200px;
-  margin-left: 20px;
+  margin-left: 32px;
 }
 
 .bootcamp{
@@ -28,4 +28,10 @@
   height: 100% !important;
   padding: 15px !important;
   background-color: white !important;
+}
+
+@media (max-width: 991px) {
+  .logos {
+    margin-left: 0px;
+  }
 }
