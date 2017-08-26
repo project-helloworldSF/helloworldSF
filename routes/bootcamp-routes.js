@@ -32,7 +32,8 @@ module.exports = function(app) {
           createdAt: req.body.createdAt,
           updatedAt: req.body.updatedAt
         }).then(function(comments) {
-          res.redirect("/bootcamps");
+          // res.redirect("/bootcamps");
+          console.log(comments);
         });
         
       });

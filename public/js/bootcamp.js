@@ -21,8 +21,8 @@ $(document).ready(function() {
         '<form class="comment-form">' +
         '<div class="form-group">' +
         '<label for="comment">Comment:</label>' +
-        '<textarea class="form-control" rows="5" id="comment"></textarea>' +
-        '<button id="comment-btn" type="submit" class="btn btn-default landing-btn">Submit Comment</button>' +
+        '<textarea class="form-control comment" rows="5" id="comment"></textarea>' +
+        '<button id="comment-btn" type="submit" class="btn btn-default landing-btn comment-btn">Submit Comment</button>' +
         //hidden key for table join sending the right key for the comment associated to the school.
         '<div style="display:none;"><input id="f_key" >' + data[i].comments + '</div>' +
         '</div>' +
