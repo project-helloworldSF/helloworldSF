@@ -120,6 +120,12 @@ label {
   }
 }
 
+@media (max-width: 480px) {
+  h2 {
+    font-size: 2.5em;
+  }
+}
+
 /* ------------------ User Display ------------------------*/
 .image-cropper {
   max-width: 300px;
